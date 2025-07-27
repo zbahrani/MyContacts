@@ -31,35 +31,35 @@ namespace MyContacts
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textName = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textFamily = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textMobile = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.textEmail = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.textAddress = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.btnSubmit = new System.Windows.Forms.Button();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.numAge = new System.Windows.Forms.NumericUpDown();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numAge)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.numericUpDown1);
-            this.groupBox1.Controls.Add(this.textBox5);
+            this.groupBox1.Controls.Add(this.numAge);
+            this.groupBox1.Controls.Add(this.textAddress);
             this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.textBox4);
+            this.groupBox1.Controls.Add(this.textEmail);
             this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.textBox3);
+            this.groupBox1.Controls.Add(this.textMobile);
             this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.textBox2);
+            this.groupBox1.Controls.Add(this.textFamily);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label6);
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.textName);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
@@ -77,12 +77,12 @@ namespace MyContacts
             this.label1.TabIndex = 0;
             this.label1.Text = "Name:";
             // 
-            // textBox1
+            // textName
             // 
-            this.textBox1.Location = new System.Drawing.Point(60, 38);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(133, 23);
-            this.textBox1.TabIndex = 1;
+            this.textName.Location = new System.Drawing.Point(60, 38);
+            this.textName.Name = "textName";
+            this.textName.Size = new System.Drawing.Size(133, 23);
+            this.textName.TabIndex = 1;
             // 
             // label6
             // 
@@ -93,12 +93,12 @@ namespace MyContacts
             this.label6.TabIndex = 10;
             this.label6.Text = "Age:";
             // 
-            // textBox2
+            // textFamily
             // 
-            this.textBox2.Location = new System.Drawing.Point(290, 38);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(148, 23);
-            this.textBox2.TabIndex = 13;
+            this.textFamily.Location = new System.Drawing.Point(290, 38);
+            this.textFamily.Name = "textFamily";
+            this.textFamily.Size = new System.Drawing.Size(148, 23);
+            this.textFamily.TabIndex = 13;
             // 
             // label2
             // 
@@ -109,12 +109,12 @@ namespace MyContacts
             this.label2.TabIndex = 12;
             this.label2.Text = "Family:";
             // 
-            // textBox3
+            // textMobile
             // 
-            this.textBox3.Location = new System.Drawing.Point(290, 79);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(148, 23);
-            this.textBox3.TabIndex = 15;
+            this.textMobile.Location = new System.Drawing.Point(290, 79);
+            this.textMobile.Name = "textMobile";
+            this.textMobile.Size = new System.Drawing.Size(148, 23);
+            this.textMobile.TabIndex = 15;
             // 
             // label3
             // 
@@ -125,12 +125,12 @@ namespace MyContacts
             this.label3.TabIndex = 14;
             this.label3.Text = "Mobile:";
             // 
-            // textBox4
+            // textEmail
             // 
-            this.textBox4.Location = new System.Drawing.Point(60, 121);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(378, 23);
-            this.textBox4.TabIndex = 17;
+            this.textEmail.Location = new System.Drawing.Point(60, 121);
+            this.textEmail.Name = "textEmail";
+            this.textEmail.Size = new System.Drawing.Size(378, 23);
+            this.textEmail.TabIndex = 17;
             // 
             // label4
             // 
@@ -141,13 +141,13 @@ namespace MyContacts
             this.label4.TabIndex = 16;
             this.label4.Text = "Email:";
             // 
-            // textBox5
+            // textAddress
             // 
-            this.textBox5.Location = new System.Drawing.Point(73, 167);
-            this.textBox5.Multiline = true;
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(365, 156);
-            this.textBox5.TabIndex = 19;
+            this.textAddress.Location = new System.Drawing.Point(73, 167);
+            this.textAddress.Multiline = true;
+            this.textAddress.Name = "textAddress";
+            this.textAddress.Size = new System.Drawing.Size(365, 156);
+            this.textAddress.TabIndex = 19;
             // 
             // label5
             // 
@@ -166,13 +166,14 @@ namespace MyContacts
             this.btnSubmit.TabIndex = 1;
             this.btnSubmit.Text = "Save";
             this.btnSubmit.UseVisualStyleBackColor = true;
+            this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
             // 
-            // numericUpDown1
+            // numAge
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(60, 79);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(133, 23);
-            this.numericUpDown1.TabIndex = 20;
+            this.numAge.Location = new System.Drawing.Point(60, 79);
+            this.numAge.Name = "numAge";
+            this.numAge.Size = new System.Drawing.Size(133, 23);
+            this.numAge.TabIndex = 20;
             // 
             // frmAddOrEdit
             // 
@@ -185,9 +186,10 @@ namespace MyContacts
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "frmAddOrEdit";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.Load += new System.EventHandler(this.frmAddOrEdit_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numAge)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -195,17 +197,17 @@ namespace MyContacts
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.NumericUpDown numAge;
+        private System.Windows.Forms.TextBox textAddress;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox textEmail;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox textMobile;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textFamily;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textName;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnSubmit;
     }

@@ -34,6 +34,10 @@ namespace MyContacts
         {
             frmAddOrEdit frm = new frmAddOrEdit();
             frm.ShowDialog();
+            if (frm.DialogResult == DialogResult.OK)
+            {
+                BindGrid();
+            }
         }
     }
 }
