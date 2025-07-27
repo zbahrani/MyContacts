@@ -1,6 +1,7 @@
 ﻿using MyContacts.Repository;
 using MyContacts.Services;
 using System;
+using System.Data;
 using System.Windows.Forms;
 
 namespace MyContacts
@@ -8,6 +9,7 @@ namespace MyContacts
     public partial class frmAddOrEdit : Form
     {
         IContactsRepository repository;
+        public int ContactID = 0;
         public frmAddOrEdit()
         {
             InitializeComponent();
@@ -16,7 +18,22 @@ namespace MyContacts
 
         private void frmAddOrEdit_Load(object sender, EventArgs e)
         {
-            this.Text = "Add New Person";
+            if (ContactID == 0)
+            {
+                this.Text = "Add New person";
+            }
+            else
+            {
+                this.Text = "Edit Person";
+                DataTable dt = repository.SelcetRow(ContactID);
+                textName.Text = dt.Rows[0][1].ToString();
+                textFamily.Text = dt.Rows[0][2].ToString();
+                textMobile.Text = dt.Rows[0][3].ToString();
+                textEmail.Text = dt.Rows[0][4].ToString();
+                numAge.Text = dt.Rows[0][5].ToString();
+                textAddress.Text = dt.Rows[0][6].ToString();
+                btnSubmit.Text = "Edit";
+            }
 
         }
         bool ValidateInputs()
@@ -56,16 +73,24 @@ namespace MyContacts
         {
             if (ValidateInputs())
             {
-                bool isSuccess = repository.Insert(textName.Text, textFamily.Text, textMobile.Text, textEmail.Text, (int)numAge.Value, textAddress.Text);
+                bool isSuccess;
+                if (ContactID == 0)
+                {
+                    isSuccess = repository.Insert(textName.Text, textFamily.Text, textMobile.Text, textEmail.Text, (int)numAge.Value, textAddress.Text);
+                }
+                else
+                {
+                    isSuccess = repository.Update(ContactID, textName.Text, textFamily.Text, textMobile.Text, textEmail.Text, (int)numAge.Value, textAddress.Text);
+                }
 
                 if (isSuccess == true)
                 {
-                    MessageBox.Show("Contact successfully registered.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("The operation was successful", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     DialogResult = DialogResult.OK;
                 }
                 else
                 {
-                    MessageBox.Show("An error has occurred.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Operation failed", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
         }
