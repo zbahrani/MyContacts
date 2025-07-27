@@ -29,13 +29,168 @@ namespace MyContacts
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
+            this.Search = new System.Windows.Forms.GroupBox();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.dgcontacts = new System.Windows.Forms.DataGridView();
+            this.ContactID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MyName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Family = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Mobile = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Age = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.toolStrip1.SuspendLayout();
+            this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgcontacts)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // toolStrip1
+            // 
+            this.toolStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripButton1});
+            this.toolStrip1.Location = new System.Drawing.Point(0, 0);
+            this.toolStrip1.Name = "toolStrip1";
+            this.toolStrip1.Size = new System.Drawing.Size(697, 27);
+            this.toolStrip1.TabIndex = 0;
+            this.toolStrip1.Text = "toolStrip1";
+            // 
+            // toolStripButton1
+            // 
+            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
+            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton1.Name = "toolStripButton1";
+            this.toolStripButton1.Size = new System.Drawing.Size(29, 24);
+            this.toolStripButton1.Text = "toolStripButton1";
+            // 
+            // Search
+            // 
+            this.Search.Location = new System.Drawing.Point(13, 46);
+            this.Search.Name = "Search";
+            this.Search.Size = new System.Drawing.Size(675, 88);
+            this.Search.TabIndex = 1;
+            this.Search.TabStop = false;
+            this.Search.Text = "Search";
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.dgcontacts);
+            this.groupBox1.Location = new System.Drawing.Point(12, 140);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(676, 307);
+            this.groupBox1.TabIndex = 2;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "List";
+            // 
+            // dgcontacts
+            // 
+            this.dgcontacts.AllowUserToAddRows = false;
+            this.dgcontacts.AllowUserToDeleteRows = false;
+            this.dgcontacts.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgcontacts.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgcontacts.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ContactID,
+            this.MyName,
+            this.Family,
+            this.Mobile,
+            this.Age,
+            this.Email});
+            this.dgcontacts.Location = new System.Drawing.Point(6, 22);
+            this.dgcontacts.Name = "dgcontacts";
+            this.dgcontacts.ReadOnly = true;
+            this.dgcontacts.RowHeadersWidth = 51;
+            this.dgcontacts.RowTemplate.Height = 24;
+            this.dgcontacts.Size = new System.Drawing.Size(664, 276);
+            this.dgcontacts.TabIndex = 0;
+            // 
+            // ContactID
+            // 
+            this.ContactID.DataPropertyName = "ContacID";
+            this.ContactID.HeaderText = "کد شخص";
+            this.ContactID.MinimumWidth = 6;
+            this.ContactID.Name = "ContactID";
+            this.ContactID.ReadOnly = true;
+            this.ContactID.Visible = false;
+            // 
+            // MyName
+            // 
+            this.MyName.DataPropertyName = "Name";
+            this.MyName.HeaderText = "نام";
+            this.MyName.MinimumWidth = 6;
+            this.MyName.Name = "MyName";
+            this.MyName.ReadOnly = true;
+            // 
+            // Family
+            // 
+            this.Family.DataPropertyName = "Family";
+            this.Family.HeaderText = "نام خانوادگی";
+            this.Family.MinimumWidth = 6;
+            this.Family.Name = "Family";
+            this.Family.ReadOnly = true;
+            // 
+            // Mobile
+            // 
+            this.Mobile.DataPropertyName = "Mobile";
+            this.Mobile.HeaderText = "موبایل";
+            this.Mobile.MinimumWidth = 6;
+            this.Mobile.Name = "Mobile";
+            this.Mobile.ReadOnly = true;
+            // 
+            // Age
+            // 
+            this.Age.DataPropertyName = "Age";
+            this.Age.HeaderText = "سن";
+            this.Age.MinimumWidth = 6;
+            this.Age.Name = "Age";
+            this.Age.ReadOnly = true;
+            // 
+            // Email
+            // 
+            this.Email.DataPropertyName = "Email";
+            this.Email.HeaderText = "ایمیل";
+            this.Email.MinimumWidth = 6;
+            this.Email.Name = "Email";
+            this.Email.ReadOnly = true;
+            // 
+            // Form1
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "Form1";
+            this.ClientSize = new System.Drawing.Size(697, 450);
+            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.Search);
+            this.Controls.Add(this.toolStrip1);
+            this.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Name = "Form1";
+            this.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.Text = "My Phone Book";
+            this.Load += new System.EventHandler(this.Form1_Load);
+            this.toolStrip1.ResumeLayout(false);
+            this.toolStrip1.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgcontacts)).EndInit();
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion
+
+        private System.Windows.Forms.ToolStrip toolStrip1;
+        private System.Windows.Forms.ToolStripButton toolStripButton1;
+        private System.Windows.Forms.GroupBox Search;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.DataGridView dgcontacts;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ContactID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MyName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Family;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Mobile;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Age;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Email;
     }
 }
 
